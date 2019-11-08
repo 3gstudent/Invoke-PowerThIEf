@@ -32,7 +32,7 @@ System restart required.
 
 I get [them](https://github.com/3gstudent/Invoke-PowerThIEf/tree/master/Microsoft.mshtml) from my Server2012r2 x64.
 
-Add it from the command line：
+Add them from the command line：
 
 ```
 xcopy Microsoft.mshtml C:\Windows\assembly\GAC\Microsoft.mshtml /i /s /e
