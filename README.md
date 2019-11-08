@@ -2,7 +2,45 @@
 
 Add support for Win7sp1 x64.
 
+Invoke-PowerThIEf need Powershell 4.0, but Win7sp1's default Powershell version is 2.0.
 
+So we need to install Microsoft .NET Framework 4.5 and Windows Management Framework 4.0.
+
+### 1.Install .NET Framework 4.5 from the command line
+
+We can use this:
+
+https://github.com/3gstudent/Homework-of-C-Language/blob/master/Install_.Net_Framework_from_the_command_line.cpp
+
+System restart required.
+
+### 2.Install Windows Management Framework 4.0 from the command line
+
+We can get the installation package from：
+
+https://www.microsoft.com/en-us/download/details.aspx?id=40855
+
+Install it from the command line：
+
+```
+wusa.exe Windows6.1-KB2819745-x64-MultiPkg.msu /quiet /norestart
+```
+
+System restart required.
+
+### 3.Add dependent files
+
+I get [them](https://github.com/3gstudent/Invoke-PowerThIEf/tree/master/Microsoft.mshtml) from my Server2012r2 x64.
+
+Add it from the command line：
+
+```
+xcopy Microsoft.mshtml C:\Windows\assembly\GAC\Microsoft.mshtml /i /s /e
+```
+
+Then you can use Invoke-PowerThIEf under Win7sp1 x64.
+
+:)
 
 
 ---
